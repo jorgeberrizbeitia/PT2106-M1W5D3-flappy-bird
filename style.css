@@ -1,3 +1,5 @@
+/* style.css */
+
 #my-canvas {
   background-color: lightgray;
 }
@@ -14,4 +16,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#my-canvas {
+  display: none
+}
+
+#gameover-screen {
+  display: none
 }
