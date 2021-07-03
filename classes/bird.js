@@ -11,14 +11,35 @@ class Bird {
 
   // drawing of the bird
   drawBird = () => {
-    ctx.drawImage(this.image, this.x, this.y, this.width, this.height)
-  }
+    ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+  };
 
   birdGravity = () => {
-    this.y++
-  }
+    if (this.y + this.height < canvas.height) {
+      this.y++;
+    }
+  };
 
   birdJump = () => {
-    this.y -= 40
-  }
+    this.y -= 40;
+  };
+
+  birdPipeCollision = (pipe) => {
+    // pipe is gonna be an obj with all pipe properties
+
+    //   if (this.x < pipe.x + pipe.width &&
+    //     this.x + this.width > pipe.x &&
+    //     this.y < pipe.y + pipe.height &&
+    //     this.y + this.height > pipe.y) {
+    //      // collision detected!
+    //      return true
+    //  }
+
+    return (
+      this.x < pipe.x + pipe.width &&
+      this.x + this.width > pipe.x &&
+      this.y < pipe.y + pipe.height &&
+      this.y + this.height > pipe.y
+    );
+  };
 }
