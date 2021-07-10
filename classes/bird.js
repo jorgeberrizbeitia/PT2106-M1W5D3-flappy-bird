@@ -5,7 +5,7 @@ class Bird {
     this.width = 40;
     this.height = 40;
     this.image = new Image();
-    this.image.src = "./images/flappy.png";
+    this.image.src = "images/flappy.png";
     this.speed = 1;
   }
 

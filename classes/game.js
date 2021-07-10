@@ -2,7 +2,7 @@ class Game {
   constructor() {
     // arguments are used to personalize the objects
     this.bg = new Image();
-    this.bg.src = "./images/bg.png"
+    this.bg.src = "images/bg.png"
     this.bird = new Bird();
     this.pipesArr = [];
     this.isGameOn = true;
@@ -17,7 +17,7 @@ class Game {
       let randomPos = Math.floor(Math.random() * -canvas.height / 2)
 
       // we want to create a pipe
-      let pipe = new Pipe(randomPos, "./images/obstacle_top.png")
+      let pipe = new Pipe(randomPos, "images/obstacle_top.png")
   
       // we want to add the pipe to the array
       this.pipesArr.push(pipe)
@@ -26,7 +26,7 @@ class Game {
 
       // position of pipe top + height of pipe + constant of 3 times bird
       let randomPos2 = randomPos + pipe.height + this.bird.height * 3
-      let pipe2 = new Pipe(randomPos2, "./images/obstacle_bottom.png")
+      let pipe2 = new Pipe(randomPos2, "images/obstacle_bottom.png")
       this.pipesArr.push(pipe2)
     }
   }
